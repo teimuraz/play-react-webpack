@@ -1,7 +1,7 @@
-Play framework, ReactJs and webpack
+Play framework (2.5.x), ReactJs and webpack
 ===================================
 
-This is a simple project to illustrate how to setup playframework to work with react js, es6 and webpack
+This is a simple project to illustrate how to setup playframework (2.5.x) to work with react js, es6 and webpack
 
 Just checkout the project and do ```npm install```to install all dependencies or rebuild it step by step by following instructions below.
 
@@ -54,3 +54,4 @@ npm install node-sass css-loader sass-loader style-loader --save-dev
     "style-loader": "^0.13.0",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14
+

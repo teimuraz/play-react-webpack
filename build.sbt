@@ -1,12 +1,10 @@
-import play.PlayImport.PlayKeys.playRunHooks
-
-name := """play-react-webpack"""
+name := """play2.5-react-webpack"""
 
 version := "1.0-SNAPSHOT"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
-scalaVersion := "2.11.6"
+scalaVersion := "2.11.8"
 
 libraryDependencies ++= Seq(
   jdbc,
@@ -16,7 +14,7 @@ libraryDependencies ++= Seq(
   "com.codeborne" % "phantomjsdriver" % "1.2.1"
 )
 
-playRunHooks <+= baseDirectory.map(Webpack.apply)
+PlayKeys.playRunHooks += Webpack(baseDirectory.value)
 
 routesGenerator := InjectedRoutesGenerator
 
@@ -31,5 +29,3 @@ watchSources ~= { (ws: Seq[File]) =>
 pipelineStages := Seq(digest, gzip)
 
 resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
-
-
